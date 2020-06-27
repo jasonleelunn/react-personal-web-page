@@ -1,13 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import {ChildTest} from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+
+class Build extends React.Component {
+
+	constructor(props) {
+    super(props);
+
+    this.state = { name: 'Jason' };
+    
+    this.changeName = this.changeName.bind(this);
+  }
+
+   changeName(newName) {
+    this.setState({
+ 		name: newName
+    });
+  }
+ 
+  render() {
+    return (
+		<div>
+
+			<ChildTest name={this.state.name} onChange={this.changeName} />
+
+  		</div>
+    );
+  }
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <Build />,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
