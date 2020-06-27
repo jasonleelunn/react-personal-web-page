@@ -26,8 +26,8 @@ export class ChildTest extends React.Component {
   }
 
   changeColour() {
-    const newColourTop = this.state.colortop == color1 ? color2 : color1;
-    const newColourBottom = this.state.colorbottom == color2 ? color1 : color2;
+    const newColourTop = this.state.colortop === color1 ? color2 : color1;
+    const newColourBottom = this.state.colorbottom === color2 ? color1 : color2;
     this.setState({
     colortop: newColourTop,
     colorbottom: newColourBottom
