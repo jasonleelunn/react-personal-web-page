@@ -43,7 +43,7 @@ export class ChildTest extends React.Component {
         </h1>
         <select id="great-names" onChange={this.handleChange}>
           <option value="Jase">
-            Jase
+            Jason
           </option>
 
           <option value="Jay Man">
@@ -51,7 +51,7 @@ export class ChildTest extends React.Component {
           </option>
 
           <option value="Chunks">
-            Chunks
+            Jase
           </option>
         </select>
 
