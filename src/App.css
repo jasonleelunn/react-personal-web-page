@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  /*color: black;*/
 }
 
 .App-link {
-  color: #90aafb;
+  color: #999b99;
 }
 
 .ChildTest {
@@ -36,12 +36,15 @@
   min-height: 50vh;
   display: flex;
   flex-direction: column;
-  padding:5px;
-  margin:20px;
+  /*padding:5px;*/
+  /*margin:20px;*/
 }
 
 .childButton {
-  padding:5px;
+  padding:10px;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*float: right;*/
 }
 
 @keyframes App-logo-spin {
@@ -51,4 +54,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.mainNav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.mainNav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.mainNav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.mainNav a:active {
+  background-color: #666666;
+  color: white;
 }

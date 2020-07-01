@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import {ChildTest} from './App';
+import {NavBar} from './App';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -26,6 +27,8 @@ class Build extends React.Component {
   render() {
     return (
 		<div>
+
+			<NavBar/>
 
 			<ChildTest name={this.state.name} onChange={this.changeName} />
 

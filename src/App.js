@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const color1 = '#00cc00';
-const color2 = '#FFD712';
+const color2 = '#000000';
+const color1 = '#FFFFFF';
+// const text = 'Dark Mode';	
 
 
 export class ChildTest extends React.Component {
@@ -13,7 +14,8 @@ export class ChildTest extends React.Component {
     this.state = { 
       name: 'Jason',
       colortop: color1,
-      colorbottom: color2
+      colorbottom: color2,
+      text: 'Dark Mode'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -28,39 +30,53 @@ export class ChildTest extends React.Component {
   changeColour() {
     const newColourTop = this.state.colortop === color1 ? color2 : color1;
     const newColourBottom = this.state.colorbottom === color2 ? color1 : color2;
+    const textValue = this.state.text === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'
     this.setState({
     colortop: newColourTop,
-    colorbottom: newColourBottom
+    colorbottom: newColourBottom,
+    text: textValue
     });
   }
+
+  // if (this.state.colortop === color1) {
+  // text = 'Light Mode';
+  // } else {
+  // text = 'Dark Mode';
+  // }
 
   render() {
     return (
       <div>
+
       <div className="ChildTest" style={{background: this.state.colortop}} >
-        <h1>
-          Hey my name is {this.props.name}!
-        </h1>
-        <select id="great-names" onChange={this.handleChange}>
-          <option value="Jase">
-            Jason
-          </option>
+  
+	      <button className="childButton" onClick={this.changeColour}>
+	        {this.state.text}
+	      </button>
 
-          <option value="Jay Man">
-            Jay Man
-          </option>
+	      <h1 style={{color: this.state.colorbottom}}>
+	          Hey my name is {this.props.name}!
+	      </h1>
 
-          <option value="Chunks">
-            Jase
-          </option>
-        </select>
+	      <select id="great-names" onChange={this.handleChange}>
+	          <option value="Jason">
+	            Jason
+	          </option>
 
-        <button className="childButton" onClick={this.changeColour}>
-        Press Me
-        </button>
+	          <option value="Jay Man">
+	            Jay Man
+	          </option>
+
+	          <option value="Jase">
+	            Jase
+	          </option>
+	      </select>
       </div>
 
-      <div className="App" style={{background: this.state.colorbottom}} >
+        
+      
+
+      <div className="App" style={{background: this.state.colorbottom, color: this.state.colortop}} >
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -79,6 +95,24 @@ export class ChildTest extends React.Component {
     </div>
     );
   }
+}
+
+export class NavBar extends React.Component {
+	constructor(props) {
+		super(props);
+
+	}
+
+	render() {
+		return (
+			<div className="mainNav" >
+			  <a class="active" href="#home">Home</a>
+			  <a href="#testing">Testing Ground</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			</div>
+		);
+	}
 }
 
 
