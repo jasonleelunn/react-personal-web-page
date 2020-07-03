@@ -9,6 +9,7 @@
 ## To-Do
 
 * Learn react-router fully to utilise Link and Route techniques for page navigation
+* Fix current external navigation issues
 * Add LaTeX typesetting rendering for certain text pieces
 * Properly integrate multiple HTML elements for a clean and easy to use experience
 * ...
