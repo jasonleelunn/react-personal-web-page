@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 const color2 = '#000000';
 const color1 = '#FFFFFF';
@@ -117,8 +118,8 @@ export class NavBar extends React.Component {
 		return (
 			<div className="mainNav" >
 			  <a class="active" href="/react-personal-web-page">Home</a>
-			  <a href="/react-personal-web-page/testing">Testing Ground</a>
-			  <a href="/react-personal-web-page/about">About</a>
+			  <Link to="/react-personal-web-page/testing">Testing Ground</Link>
+			  <Link to="/react-personal-web-page/about">About</Link>
 			  <a href="https://github.com/jasonleelunn/react-personal-web-page">GitHub Repo</a>
 			  <a href="https://linkedin.com/in/jasonleelunn">My LinkedIn</a>
 			</div>
