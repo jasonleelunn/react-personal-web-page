@@ -40,6 +40,21 @@
   /*margin:20px;*/
 }
 
+.HomePage {
+  color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+}
+
+.AboutPage {
+  color: #FFFFFF;
+}
+
 .childButton {
   padding:10px;
   /*display: flex;*/

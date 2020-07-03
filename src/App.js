@@ -4,7 +4,6 @@ import './App.css';
 
 const color2 = '#000000';
 const color1 = '#FFFFFF';
-// const text = 'Dark Mode';	
 
 
 export class ChildTest extends React.Component {
@@ -38,11 +37,6 @@ export class ChildTest extends React.Component {
     });
   }
 
-  // if (this.state.colortop === color1) {
-  // text = 'Light Mode';
-  // } else {
-  // text = 'Dark Mode';
-  // }
 
   render() {
     return (
@@ -55,7 +49,7 @@ export class ChildTest extends React.Component {
 	      </button>
 
 	      <h1 style={{color: this.state.colorbottom}}>
-	          Hey my name is {this.props.name}!
+	          Hello, my name is {this.props.name}!
 	      </h1>
 
 	      <select id="great-names" onChange={this.handleChange}>
@@ -72,70 +66,66 @@ export class ChildTest extends React.Component {
 	          </option>
 	      </select>
       </div>
+    
 
-        
-      
-
-      <div className="App" style={{background: this.state.colorbottom, color: this.state.colortop}} >
+{/*    <div className="App" style={{background: this.state.colorbottom, color: this.state.colortop}} >
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello
-        </p>
+        
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Open the Portal
         </a>
       </header>
-    </div>
+    </div>*/}
+
     </div>
     );
   }
 }
 
-export class NavBar extends React.Component {
-	constructor(props) {
-		super(props);
+export const HomePage = () => (
+<div className="HomePage">
+	<h1>Welcome!</h1>
+	<img src={logo} className="App-logo" alt="logo" />
+</div>
+);
 
-	}
+export const AboutPage = () => (
+<div className="AboutPage">
+	<h1>About Page</h1>
+	<a> 
+	This website is a personal project of mine, attempting to expand my programming knowledge
+	using the JavaScript library 'React'. I would like build these pages with the notion of easy up-scaling
+	to ensure all code written is to the highest standard of my personal ability.
+	At the time of writing this, my plans for the content on this website are vague. 
+	I want to become comfortable with the language, framework and features of Reactjs before adding any large amounts
+	of my own personal content and other projects.
+	</a>
+</div>
+);
+
+export class NavBar extends React.Component {
+	// constructor(props) {
+	// 	super(props);
+
+	// }
 
 	render() {
 		return (
 			<div className="mainNav" >
-			  <a class="active" href="#home">Home</a>
-			  <a href="#testing">Testing Ground</a>
-			  <a href="#contact">Contact</a>
-			  <a href="#about">About</a>
+			  <a class="active" href="/">Home</a>
+			  <a href="/testing">Testing Ground</a>
+			  <a href="/about">About</a>
+			  <a href="https://github.com/jasonleelunn/react-personal-web-page">GitHub Repo</a>
+			  <a href="https://linkedin.com/in/jasonleelunn">My LinkedIn</a>
 			</div>
 		);
 	}
 }
 
-
-// function App() {
-//   return (
-//     <div className="App" style={{background: this.state.colorbottom}}>
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Hello
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Open the Portal
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 
 // export default App;

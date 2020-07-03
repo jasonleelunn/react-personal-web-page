@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './index.css';
 // import App from './App';
 import {ChildTest} from './App';
 import {NavBar} from './App';
+import {AboutPage} from './App';
+import {HomePage} from './App';
 import * as serviceWorker from './serviceWorker';
 
 
 
-class Build extends React.Component {
+class ParentTest extends React.Component {
 
 	constructor(props) {
     super(props);
@@ -28,13 +31,27 @@ class Build extends React.Component {
     return (
 		<div>
 
-			<NavBar/>
-
 			<ChildTest name={this.state.name} onChange={this.changeName} />
 
   		</div>
+
     );
   }
+}
+
+class Build extends React.Component {
+	render() {
+		return (
+			<Router>
+	        <div>
+	          <NavBar />
+	          <Route exact path="/" component={HomePage} />
+	          <Route path="/testing" component={ParentTest} />
+	          <Route path="/about" component={AboutPage} />
+	        </div>
+	      </Router>
+			);
+	}
 }
 
 ReactDOM.render(
@@ -44,7 +61,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
