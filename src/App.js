@@ -117,7 +117,7 @@ export class NavBar extends React.Component {
 	render() {
 		return (
 			<div className="mainNav" >
-			  <a class="active" href="/react-personal-web-page">Home</a>
+			  <Link to="/react-personal-web-page">Home</Link>
 			  <Link to="/react-personal-web-page/testing">Testing Ground</Link>
 			  <Link to="/react-personal-web-page/about">About</Link>
 			  <a href="https://github.com/jasonleelunn/react-personal-web-page">GitHub Repo</a>
