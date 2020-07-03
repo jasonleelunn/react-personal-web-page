@@ -46,7 +46,7 @@ class Build extends React.Component {
 	        <div>
 	          <NavBar />
 	          <Route exact path="/" component={HomePage} />
-	          <Route path="/react-personal-web-page/testing" component={ParentTest} />
+	          <Route path="/testing" component={ParentTest} />
 	          <Route path="/react-personal-web-page/about" component={AboutPage} />
 	        </div>
 	      </Router>
