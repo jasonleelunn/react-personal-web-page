@@ -13,4 +13,5 @@
   * [This solution explains this problem in detail and gives a good range of solutions to try and implement later](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)
 * Add LaTeX typesetting rendering for certain text pieces
 * Properly integrate multiple HTML elements for a clean and easy to use experience
+* Separate components in to files (containers and components file tree)
 * ...
