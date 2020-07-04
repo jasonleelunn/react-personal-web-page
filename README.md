@@ -15,3 +15,8 @@
 * Properly integrate multiple HTML elements for a clean and easy to use experience
 * Separate components in to files (containers and components file tree)
 * ...
+
+## Long Term Goals
+
+* Interface with external API's to live update content on the website (such as new GitHub Repos)
+* ...
