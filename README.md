@@ -10,6 +10,7 @@
 
 * Learn react-router fully to utilise Link and Route techniques for page navigation
 * Fix current external navigation issues
+  * [This solution explains this problem in detail and gives a good range of solutions to try and implement later](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)
 * Add LaTeX typesetting rendering for certain text pieces
 * Properly integrate multiple HTML elements for a clean and easy to use experience
 * ...
