@@ -19,4 +19,5 @@
 ## Long Term Goals
 
 * Interface with external API's to live update content on the website (such as new GitHub Repos)
+* Use custom domain to clean up URL and navigation
 * ...
